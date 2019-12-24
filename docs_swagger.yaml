@@ -1,0 +1,90 @@
+openapi: "3.0.0"
+info:
+    title: "algorithms"
+    version: "v1"
+    description: "fibonacci, factorial and ackermann function algorithms"
+servers:
+  - url: http://127.0.0.1:8000/
+    description: local API
+tags:
+  - name: "Fibonacci"
+    description: "calculate fibonacci Endpoints"
+  - name: "Factorial"
+    description: "calculate factorial Endpoints"
+  - name: "Ackermann"
+    description: "calculate ackermann Endpoints"
+paths: 
+    /fibonacci:
+      get:
+        tags:
+          - "Fibonacci"
+        summary: "get fibonacci of number"
+        parameters:
+        - in: path
+          name: number
+          description: "integar postive number"
+          schema:
+            type: number
+          required: true
+        responses:
+          '200':
+            description: "result of fibonacci"
+            content:
+              application/json:
+                schema:
+                  type: number
+          '400':
+            description: "Bad Request"
+            
+    /factorial:
+      get:
+        tags:
+          - "Factorial"
+        summary: "get factorial of number"
+        parameters:
+        - in: path
+          name: number
+          description: "integar postive number"
+          schema:
+            type: number
+          required: true
+        responses:
+          '200':
+            description: "result of factorial"
+            content:
+              application/json:
+                schema:
+                  type: number
+          '400':
+            description: "Bad Request"
+    
+    /ackermann:
+      get:
+        tags:
+          - "Ackermann"
+        summary: "get ackermann function of m,n"
+        parameters:
+        - in: path
+          name: firstnumber
+          description: "integar postive number"
+          schema:
+            type: number
+          required: true
+
+        - in: path
+          name: secondnumber
+          description: "integar postive number"
+          schema:
+            type: number
+          required: true
+        
+        responses:
+          '200':
+            description: "result of factorial"
+            content:
+              application/json:
+                schema:
+                  type: number
+          '400':
+            description: "Bad Request"
+    
