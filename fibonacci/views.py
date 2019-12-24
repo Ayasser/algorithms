@@ -3,19 +3,6 @@ from rest_framework import status, viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import time
-# def fibonacci(number): 
-#     fibonacci_of_zero = 0
-#     fibonacci_of_one = 1
-#     if number == 0:
-#         return fibonacci_of_zero 
-#     elif number == 1: 
-#         return fibonacci_of_one 
-#     else:
-#         for i in range(2,int(number)+1):
-#             total = fibonacci_of_zero + fibonacci_of_one 
-#             fibonacci_of_zero = fibonacci_of_one 
-#             fibonacci_of_one = total 
-#         return fibonacci_of_one 
 
 def fibonacci(number): 
       
