@@ -44,3 +44,17 @@ $(env)  python3 manage.py runserver
 ```sh
 $(env)  python3 manage.py test
 ```
+## URLs:
+
+#### factorial
+```
+http://127.0.0.1:8000/factorial?number=10
+```
+#### fibonacci
+```
+http://127.0.0.1:8000/fibonacci?number=25
+```
+#### ackermann
+```
+http://127.0.0.1:8000/ackermann?firstnumber=2&secondnumber=4
+```
